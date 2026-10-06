@@ -156,7 +156,7 @@ export default function App() {
   const dynamicInputStyle = { ...inputStyle, backgroundColor: theme.inputBg, color: theme.text, borderColor: theme.border };
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: theme.bg, color: theme.text, minHeight: '100vh', transition: 'all 0.3s ease' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: theme.bg, color: theme.text, minHeight: '100vh', width: '100%', boxSizing: 'border-box', transition: 'all 0.3s ease' }}>
       
       {/* Header Bar */}
       <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -206,7 +206,7 @@ export default function App() {
       )}
 
       {/* Summary Metrics Cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '25px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '25px' }}>
         <div style={{ ...cardStyle, backgroundColor: theme.cardBg }}>
           <div>
             <p style={cardLabelStyle}>Total Items</p>
@@ -232,7 +232,7 @@ export default function App() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '20px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
         {/* Form Panel */}
         <div style={{ backgroundColor: theme.cardBg, padding: '20px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
